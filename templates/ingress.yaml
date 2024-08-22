@@ -14,7 +14,14 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /
+        path: /api/v1/gin
+        backend:
+          service:
+            name: hello-gin
+            port:
+              name: http
+      - pathType: Prefix
+        path: /metrics
         backend:
           service:
             name: hello-gin
