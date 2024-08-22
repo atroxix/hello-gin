@@ -14,7 +14,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/api/v1/gin"
+        path: /
         backend:
           service:
             name: hello-gin
